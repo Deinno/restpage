@@ -1,0 +1,26 @@
+:root{
+
+   /*FONTS*/
+
+    /*fonts size*/
+    --fs-xl: 5rem;
+    --fs-lg: 1.5rem;
+    --fs-md: 1.125rem;
+    --fs-nm: 1.rem;
+    --fs-sm: 0.875.rem;
+
+    /* fotns weight*/
+    --fw-bk: 900;
+    --fw-md: 500;
+    --fw-rg: 400;
+
+
+   /*COLORS*/
+
+   --clr-primary: #E51E26;
+   --clr-main-bg: #FCE4EF;
+   --clr-secondary: ;
+   --clr-white: hsla(0,100%,100%,1);
+   --clr-black: hsla(0, 0%, 0%, 1);
+}
+

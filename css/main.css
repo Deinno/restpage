@@ -1,0 +1,70 @@
+/* Estilos para el navbar */
+@import url(./vars.css);
+
+body{
+    background: var(--clr-main-bg);
+    display: grid;
+    margin: 0;
+    padding: 0;
+
+}
+
+.hero-container{
+    background: url(../imgs/banner-ratatouille.jpg); /* Color de fondo del navbar */
+    padding: 0; /* Espaciado interno superior e inferior */
+    color: #fff; /* Color del texto en el navbar */
+    background-size: cover;
+    border-bottom-left-radius: 6rem;
+    border-bottom-right-radius: 6rem;
+    color: var(--clr-white);
+    height: min(45rem, 50rem, 55rem);
+    text-align: center;
+    width: 100%;
+}
+
+.logo{
+    display: flex;
+}
+
+#logo-text{
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-lg);
+    
+}
+nav {
+    background-color: var(--clr-primary);
+    margin: 0; 
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-lg);
+    
+}
+
+#nav-logo{
+    
+    width: 40px;
+    margin: 8px 10px 8px 70px;
+}
+
+.menu {
+    list-style: none; /* Elimina las viñetas de la lista */
+    display: flex;
+    margin-left: 100px;
+}
+
+.menu li {
+    margin-right: 20px; /* Espacio entre elementos del menú */
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Cambiar el color del enlace cuando se pasa el cursor por encima */
+.menu a:hover {
+    color: #333; /* Color de enlace al pasar el cursor */
+}
