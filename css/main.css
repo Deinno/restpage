@@ -14,10 +14,10 @@ body{
     padding: 0; /* Espaciado interno superior e inferior */
     color: #fff; /* Color del texto en el navbar */
     background-size: cover;
-    border-bottom-left-radius: 6rem;
-    border-bottom-right-radius: 6rem;
+    /*border-bottom-left-radius: 6rem;
+    border-bottom-right-radius: 6rem;*/
     color: var(--clr-white);
-    height: min(45rem, 50rem, 55rem);
+    height: min(40rem, 45rem, 50rem);
     text-align: center;
     width: 100%;
 }
@@ -28,6 +28,7 @@ body{
 
 #logo-text{
     margin-left: 20px;
+    margin-top: 22px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: var(--fs-lg);
     
@@ -67,4 +68,209 @@ nav {
 /* Cambiar el color del enlace cuando se pasa el cursor por encima */
 .menu a:hover {
     color: #333; /* Color de enlace al pasar el cursor */
+}
+
+.hero-title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(var(--fs-lg),4rem,var(--fs-xl)); 
+    /*width: 15ch; /* esta unidad "CH" mide la cantidad de caracteres*/
+    margin: 100px 0 0 0 ;
+}
+
+.hero-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-md);
+    width: clamp(100ch, 50%, 55ch);
+    margin: 90px auto 2rem; 
+    
+}
+
+.search-container {
+    display: flex;
+    max-width: 600px;
+    margin: 100px auto 0;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-lg);
+    
+
+}
+
+#search-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 10px solid var(--clr-main-bg);
+    border-radius: 30px 30px 30px 30px;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-lg);
+}
+
+#search-button {
+    position: absolute;
+    background-color: var(--clr-primary);
+    color: #fff;
+    border: none;
+    border-radius: 30px 30px 30px 30px;
+    padding: 10px 37px;
+    cursor: pointer;
+    outline: none;
+    right: 6px;
+    top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-lg);
+}
+
+#offer-title{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--clr-primary);
+    font-size: var(--fs-md);
+    font-style: italic;
+    margin-left: 78px;
+    margin-top: 100px;
+}
+
+#offer-subtitle{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto 78px;
+    font-style: bold;
+    font-size: var(--fs-md);
+    
+
+}
+.dp-flx{
+    display: flex;
+    justify-content: space-between;
+}
+#left-of-button{
+    position: relative;
+    background-color: var(--clr-primary);
+    border: none;
+    color: var(--clr-white);
+    font-weight: bolder;
+    font-size: 2rem;
+    top: 20px;
+    left: 25px;
+
+}
+
+#right-of-button{
+    position: relative;
+    background-color: var(--clr-primary);
+    border: none;
+    color: var(--clr-white);
+    font-weight: bolder;
+    font-size: 2rem;
+    top: 20px;
+    left: 25px;
+
+}
+
+.promotions {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.promotion {
+    display: flex;
+    flex: 0 0 33%; /* Para que cada contenedor ocupe la mitad del espacio */
+    border: 1px solid #ccc;
+    margin: auto 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden; /* Evita que el contenido se desborde */
+    height: 13rem;
+}
+
+.promotion:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el cursor */
+}
+
+
+
+.promotion-image img {
+  
+    /* Para que la imagen se ajuste al 100% de la altura del contenedor */
+    transform: scale(1.1);
+    width: 200px;
+    height: 200px;
+}
+
+.promotion-info {
+    position: relative;
+    flex: 0 0 50%; /* Para que el contenedor de la información ocupe la mitad del espacio */
+    background-color: var(--clr-white);
+    padding: 10px;
+}
+
+.promotion h2 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.promotion p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.promo-icons{
+    display: flex;
+    width: 150px;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+   
+    
+    
+    
+}
+
+.icon-img{
+    height: 20px;
+}
+
+.icon-cart{
+    height: 20px;
+    margin-right: 2px;
+}
+
+.promo-icon{
+    background: var(--clr-primary);
+    align-items: center;
+    height: 31px;
+    justify-content: center;
+    display: flex;
+    flex: 0 0 20%;
+    margin: auto 4px;
+}
+
+.eye{
+    height: 15px;
+}
+
+.discount{
+    
+    
+    display: flex;
+    position: relative;
+    height: 73px;
+    background-color: var(--clr-primary);
+    justify-content: center;
+    align-items: center;
+    top: 70px;
+    right: 255px;
+    border-radius: 10rem;
+}
+
+.discount h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+    margin: 10px 10px;
+    color: var(--clr-white);
+
 }
