@@ -126,17 +126,18 @@ nav {
     color: var(--clr-primary);
     font-size: var(--fs-md);
     font-style: italic;
-    margin-left: 78px;
     margin-top: 100px;
+    
 }
 
-#offer-subtitle{
+#offer-titles{
     font-family: Arial, Helvetica, sans-serif;
     margin: auto 78px;
     font-style: bold;
     font-size: var(--fs-md);
-    
-
+}
+#offer-subtitle{
+    margin-top: 0;
 }
 .dp-flx{
     display: flex;
@@ -149,8 +150,9 @@ nav {
     color: var(--clr-white);
     font-weight: bolder;
     font-size: 2rem;
-    top: 20px;
+    top: 140px;
     left: 25px;
+    cursor: pointer;
 
 }
 
@@ -161,8 +163,9 @@ nav {
     color: var(--clr-white);
     font-weight: bolder;
     font-size: 2rem;
-    top: 20px;
+    top: 140px;
     left: 25px;
+    cursor: pointer;
 
 }
 
@@ -274,3 +277,165 @@ nav {
     color: var(--clr-white);
 
 }
+
+.menu-section{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.menu-titles{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto 78px;
+    font-style: bold;
+    font-size: var(--fs-md);
+}
+
+.menu-titles h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--clr-primary);
+    font-size: var(--fs-md);
+    font-style: italic;
+    margin-top: 50px;
+}
+
+.menu-titles h3 {
+
+    margin-top: 0;
+}
+
+.menu-buttons{
+   margin-top: 95px;
+   margin-right: 55px;
+}
+.button{
+    background-color: var(--clr-white);
+    border: none;
+    color: var(--clr-primary);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 2px solid var(--clr-primary);
+    padding: 4px 10px;
+
+
+}
+
+.button:hover{
+    background-color: var(--clr-primary);
+    color:var(--clr-white);
+
+}
+
+.menu-carts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto 50px auto 75px;
+    
+}
+
+.menu-cart{
+    display: flex;
+    flex: 0 0 23%;/* Para que cada contenedor ocupe la mitad del espacio */
+    border: 1px solid #ccc;
+    margin: auto 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden; /* Evita que el contenido se desborde */
+    height: 28rem;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+}
+
+.menu-image{
+    flex: 1;
+    display: flex;
+    
+}
+.menu-image img{
+    width: 300px;
+    height: auto;
+    max-width: 100%;
+}
+
+.menu-info{
+    padding: 10px;
+    flex: 1;
+    background-color: var(--clr-white);
+   
+
+}
+
+.menu-info h2{
+    
+}
+
+.menu-info h3{
+    font-size: var(--fs-md);
+    color: var(--clr-primary);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.rating-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-container img {
+    width: 20px; /* Establece el ancho deseado para las imágenes de estrellas */
+    height: 20px; /* Establece la altura deseada para las imágenes de estrellas */
+    margin: 5px; /* Agrega espaciado entre las imágenes de estrellas */
+}
+
+.m-see-more{
+   
+   
+   position: relative;
+   right: 55px;
+   border: 3px solid var(--clr-primary);
+   
+
+}
+
+.m-heart {
+    
+    
+    
+    width: 33px; /* Establece el ancho deseado para las imágenes de estrellas */
+    height: 33px;
+    background-image: url(../imgs/icons/corazon-rojo.svg);
+    background-size: 70%; /* Reduce el tamaño de la imagen de fondo al 70% del botón */
+    background-repeat: no-repeat;
+    background-position:center;
+    position: relative;
+    left: 40px;
+    padding: 10px;
+    border: 3px solid var(--clr-primary);
+}
+ 
+.m-heart:hover{
+    background-image: url(../imgs/icons/corazon-blanco.svg);
+}
+
+.m-cart{
+    width: 33px; /* Establece el ancho deseado para las imágenes de estrellas */
+    height: 33px;
+    background-image: url(../imgs/icons/carrito-de-compras-rojo.svg);
+    background-size: 70%; /* Reduce el tamaño de la imagen de fondo al 70% del botón */
+    background-repeat: no-repeat;
+    background-position:center;
+    position: relative;
+    left: 37px;
+    padding: 10px;
+    border: 3px solid var(--clr-primary);
+
+}
+
+.m-cart:hover{
+    background-image: url(../imgs/icons/carrito-de-compras.svg);
+}
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
 
     <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
     <header class="hero-container">
         <nav>
@@ -24,31 +26,35 @@
         </nav>
         <h1 class="hero-title">Delicious food with a french fragrance</h1>
         <p class="hero-text">We invite you to embark on an unforgettable culinary journey to the heart of France.
-             Our passion for authentic French cuisine is reflected in every dish we create.</p>
-             <div class="search-container">
-                <input type="text" placeholder="Search..." id="search-input">
-                <button type="button" id="search-button">Search</button>
-            </div>
+            Our passion for authentic French cuisine is reflected in every dish we create.</p>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." id="search-input">
+            <button type="button" id="search-button">Search</button>
+        </div>
     </header>
 
     <main>
 
-    <h2 id="offer-title">Weekly Offerts</h2>
-    <div id="offer-subtitle" class=" dp-flx">
-        <h3 >Up to 50% discount on Fridays!</h3>
-        <div>
-        <button id="left-of-button"><</button>
-        <button id="right-of-button">></button>
-    </div>
 
-    </div>
-    
+        <div id="offer-titles" class=" dp-flx">
+            <div>
+                <h2 id="offer-title">Weekly Offerts</h2>
+                <h3 id="offer-subtitle">Up to 50% discount on Fridays!</h3>
+            </div>
+
+            <div>
+                <button id="left-of-button"><</button>
+                <button id="right-of-button">></button>
+            </div>
+
+        </div>
+
         <section class="promotions">
             <div class="promotion">
                 <div class="promotion-image">
                     <img src="./imgs/appetizer/appetizer-onion-soup.jpg" alt="Promoción 1">
                 </div>
-                
+
                 <div class="promotion-info">
                     <h2>Onion Soup</h2>
                     <p>Descripción corta del platillo 1.</p>
@@ -65,13 +71,16 @@
                     </div>
                 </div>
 
-                <div class="discount"><h2>25%</h2></div>
+                <div class="discount">
+                    <h2>25%</h2>
+                </div>
             </div>
 
             <div class="promotion">
                 <div class="promotion-image">
                     <img src="./imgs/meals/meal-duck-magret.jpg" alt="Promoción 1">
-                </div><div class="promotion-info">
+                </div>
+                <div class="promotion-info">
                     <h2>Duck Magret</h2>
                     <p>Descripción corta del platillo 2.</p>
                     <div class="promo-icons">
@@ -86,13 +95,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="discount"><h2>10%</h2></div>
+                <div class="discount">
+                    <h2>10%</h2>
+                </div>
             </div>
 
             <div class="promotion">
                 <div class="promotion-image">
                     <img src="./imgs/desserts/dessert-romanoff-strawberries.jpg" alt="Promoción 1">
-                </div><div class="promotion-info">
+                </div>
+                <div class="promotion-info">
                     <h2>Romanoff Strawberries</h2>
                     <p>Descripción corta del platillo 3.</p>
                     <div class="promo-icons">
@@ -107,13 +119,217 @@
                         </div>
                     </div>
                 </div>
-                <div class="discount"><h2>40%</h2></div>
+                <div class="discount">
+                    <h2>40%</h2>
+                </div>
             </div>
         </section>
+
+        <section class="menu-section">
+        
+            <div class="menu-titles">
+                <h2>Food Menu</h2>
+                <h3>Most Popular Right Now</h3>
+            </div>
+            <div class="menu-buttons">
+            <button class="button">See All</button>
+            <button class="button">Drinks</button>
+            <button class=" button">Appetizers</button>
+            <button class="button">Meals</button>
+            <button class="button">Desserts</button>
+        </div>
+        </section>
+        <div class="menu-carts">
+            <div class="menu-cart">
+               <div class="menu-image">
+                <img src="./imgs/drinks/drink-coffee.jpg" alt="">
+               </div>
+               <div class="menu-info">
+
+                <h2>Coffee</h2>
+                <div class="rating-container">
+                    <img src="./imgs/icons/estrella-llena.svg" alt="">
+                    <img src="./imgs/icons/estrella-llena.svg" alt="">
+                    <img src="./imgs/icons/estrella-llena.svg" alt="">
+                    <img src="./imgs/icons/estrella-llena.svg" alt="">
+                    <img src="./imgs/icons/estrella.svg" alt="">
+                </div>
+                <h3 class="price">$00.00</h3>
+
+                <button class="m-see-more button">See more</button>
+                <button class="m-cart button"></button>
+                <button class="m-heart button" ></button>
+                
+               </div>
+            </div>
+
+            <div class="menu-cart">
+                <div class="menu-image">
+                 <img src="./imgs/drinks/drink-french-connection.jpg" alt="">
+                </div>
+                <div class="menu-info">
+                    
+                    <h2>Coffee</h2>
+                    <div class="rating-container">
+                        <img src="./imgs/icons/estrella-llena.svg" alt="">
+                        <img src="./imgs/icons/estrella-llena.svg" alt="">
+                        <img src="./imgs/icons/estrella-llena.svg" alt="">
+                        <img src="./imgs/icons/estrella-llena.svg" alt="">
+                        <img src="./imgs/icons/estrella.svg" alt="">
+                    </div>
+                    <h3 class="price">$00.00</h3>
+    
+                    <button class="m-see-more button">See more</button>
+                    <button class="m-cart button"></button>
+                    <button class="m-heart button" ></button>
+                 
+                </div>
+             </div>
+
+             <div class="menu-cart">
+                <div class="menu-image">
+                 <img src="./imgs/appetizer/appetizer-bullabesa-soup.jpg" alt="">
+                </div>
+                <div class="menu-info">
+
+                    <h2>Coffee</h2>
+                    <div class="rating-container">
+                        <img src="./imgs/icons/estrella-llena.svg" alt="">
+                        <img src="./imgs/icons/estrella-llena.svg" alt="">
+                        <img src="./imgs/icons/estrella-llena.svg" alt="">
+                        <img src="./imgs/icons/estrella-llena.svg" alt="">
+                        <img src="./imgs/icons/estrella.svg" alt="">
+                    </div>
+                    <h3 class="price">$00.00</h3>
+    
+                    <button class="m-see-more button">See more</button>
+                    <button class="m-cart button"></button>
+                    <button class="m-heart button" ></button>
+                 
+                </div>
+             </div>
+
+             <div class="menu-cart">
+                <div class="menu-image">
+                 <img src="./imgs/appetizer/appetizer-dubarry-cream.jpg" alt="">
+                </div>
+                <div class="menu-info">
+
+                    <h2>Coffee</h2>
+                    <div class="rating-container">
+                        <img src="./imgs/icons/estrella-llena.svg" alt="">
+                        <img src="./imgs/icons/estrella-llena.svg" alt="">
+                        <img src="./imgs/icons/estrella-llena.svg" alt="">
+                        <img src="./imgs/icons/estrella-llena.svg" alt="">
+                        <img src="./imgs/icons/estrella.svg" alt="">
+                    </div>
+                    <h3 class="price">$00.00</h3>
+    
+                    <button class="m-see-more button">See more</button>
+                    <button class="m-cart button"></button>
+                    <button class="m-heart button" ></button>
+                 
+                </div>
+             </div>
+
+
+             <div class="menu-cart">
+                <div class="menu-image">
+                 <img src="./imgs/drinks/drink-coffee.jpg" alt="">
+                </div>
+                <div class="menu-info">
+ 
+                 <h2>Coffee</h2>
+                 <div class="rating-container">
+                     <img src="./imgs/icons/estrella-llena.svg" alt="">
+                     <img src="./imgs/icons/estrella-llena.svg" alt="">
+                     <img src="./imgs/icons/estrella-llena.svg" alt="">
+                     <img src="./imgs/icons/estrella-llena.svg" alt="">
+                     <img src="./imgs/icons/estrella.svg" alt="">
+                 </div>
+                 <h3 class="price">$00.00</h3>
+ 
+                 <button class="m-see-more button">See more</button>
+                 <button class="m-cart button"></button>
+                 <button class="m-heart button" ></button>
+                 
+                </div>
+             </div>
+ 
+             <div class="menu-cart">
+                 <div class="menu-image">
+                  <img src="./imgs/drinks/drink-french-connection.jpg" alt="">
+                 </div>
+                 <div class="menu-info">
+                     
+                     <h2>Coffee</h2>
+                     <div class="rating-container">
+                         <img src="./imgs/icons/estrella-llena.svg" alt="">
+                         <img src="./imgs/icons/estrella-llena.svg" alt="">
+                         <img src="./imgs/icons/estrella-llena.svg" alt="">
+                         <img src="./imgs/icons/estrella-llena.svg" alt="">
+                         <img src="./imgs/icons/estrella.svg" alt="">
+                     </div>
+                     <h3 class="price">$00.00</h3>
+     
+                     <button class="m-see-more button">See more</button>
+                     <button class="m-cart button"></button>
+                     <button class="m-heart button" ></button>
+                  
+                 </div>
+              </div>
+ 
+              <div class="menu-cart">
+                 <div class="menu-image">
+                  <img src="./imgs/appetizer/appetizer-bullabesa-soup.jpg" alt="">
+                 </div>
+                 <div class="menu-info">
+ 
+                     <h2>Coffee</h2>
+                     <div class="rating-container">
+                         <img src="./imgs/icons/estrella-llena.svg" alt="">
+                         <img src="./imgs/icons/estrella-llena.svg" alt="">
+                         <img src="./imgs/icons/estrella-llena.svg" alt="">
+                         <img src="./imgs/icons/estrella-llena.svg" alt="">
+                         <img src="./imgs/icons/estrella.svg" alt="">
+                     </div>
+                     <h3 class="price">$00.00</h3>
+     
+                     <button class="m-see-more button">See more</button>
+                     <button class="m-cart button"></button>
+                     <button class="m-heart button" ></button>
+                  
+                 </div>
+              </div>
+ 
+              <div class="menu-cart">
+                 <div class="menu-image">
+                  <img src="./imgs/appetizer/appetizer-dubarry-cream.jpg" alt="">
+                 </div>
+                 <div class="menu-info">
+ 
+                     <h2>Coffee</h2>
+                     <div class="rating-container">
+                         <img src="./imgs/icons/estrella-llena.svg" alt="">
+                         <img src="./imgs/icons/estrella-llena.svg" alt="">
+                         <img src="./imgs/icons/estrella-llena.svg" alt="">
+                         <img src="./imgs/icons/estrella-llena.svg" alt="">
+                         <img src="./imgs/icons/estrella.svg" alt="">
+                     </div>
+                     <h3 class="price">$00.00</h3>
+     
+                     <button class="m-see-more button">See more</button>
+                     <button class="m-cart button"></button>
+                     <button class="m-heart button" ></button>
+                  
+                 </div>
+              </div>
+        </div>
     </main>
 
 
     <script src="./js/main.js"></script>
-    
+
 </body>
+
 </html>
