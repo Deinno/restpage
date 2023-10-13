@@ -28,7 +28,7 @@ body{
 
 #logo-text{
     margin-left: 20px;
-    margin-top: 22px;
+    margin-top: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: var(--fs-lg);
     
@@ -45,7 +45,7 @@ nav {
 
 #nav-logo{
     
-    width: 40px;
+    width: 50px;
     margin: 8px 10px 8px 70px;
 }
 
@@ -68,6 +68,20 @@ nav {
 /* Cambiar el color del enlace cuando se pasa el cursor por encima */
 .menu a:hover {
     color: #333; /* Color de enlace al pasar el cursor */
+}
+
+.icons{
+    display: flex;
+}
+
+#shopping-cart{
+    width: 60px;
+    margin: 8px 10px 8px 130px;
+}
+
+#user-menu{
+    width: 60px;
+    margin: 8px 10px 8px 10px;
 }
 
 .hero-title{
@@ -97,10 +111,10 @@ nav {
 }
 
 #search-input {
-    flex-grow: 1;
+    flex-grow: 5;
     padding: 10px;
     border: 10px solid var(--clr-main-bg);
-    border-radius: 30px 30px 30px 30px;
+    border-radius: 50px 50px 50px 50px;
     outline: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: var(--fs-lg);
@@ -115,7 +129,7 @@ nav {
     padding: 10px 37px;
     cursor: pointer;
     outline: none;
-    right: 6px;
+    right: 10px;
     top: 10px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: var(--fs-lg);
@@ -151,7 +165,7 @@ nav {
     font-weight: bolder;
     font-size: 2rem;
     top: 140px;
-    left: 25px;
+    left: 15px;
     cursor: pointer;
 
 }
@@ -199,9 +213,9 @@ nav {
 .promotion-image img {
   
     /* Para que la imagen se ajuste al 100% de la altura del contenedor */
-    transform: scale(1.1);
-    width: 200px;
-    height: 200px;
+    /*transform: scale(1.1);*/
+    width: 180px;
+    height: 210px;
 }
 
 .promotion-info {
@@ -214,11 +228,15 @@ nav {
 .promotion h2 {
     font-size: 1.2rem;
     margin: 0;
+    margin-top: 1.5rem;
+    
 }
 
 .promotion p {
     font-size: 0.9rem;
     margin: 0;
+    margin-top: 1rem;
+    margin-left: 1rem;
 }
 
 .promo-icons{
@@ -227,10 +245,6 @@ nav {
     position: absolute;
     bottom: 10px;
     right: 20px;
-   
-    
-    
-    
 }
 
 .icon-img{
@@ -257,8 +271,6 @@ nav {
 }
 
 .discount{
-    
-    
     display: flex;
     position: relative;
     height: 73px;
@@ -305,8 +317,8 @@ nav {
 }
 
 .menu-buttons{
-   margin-top: 95px;
-   margin-right: 55px;
+   margin-top: 100px;
+   margin-right: 70px;
 }
 .button{
     background-color: var(--clr-white);
@@ -351,12 +363,12 @@ nav {
 }
 
 .menu-image{
-    flex: 1;
+    flex: 2;
     display: flex;
     
 }
 .menu-image img{
-    width: 300px;
+    width: auto;
     height: auto;
     max-width: 100%;
 }
@@ -366,11 +378,11 @@ nav {
     flex: 1;
     background-color: var(--clr-white);
    
-
 }
 
 .menu-info h2{
-    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-md);
 }
 
 .menu-info h3{
@@ -392,13 +404,9 @@ nav {
 }
 
 .m-see-more{
-   
-   
    position: relative;
-   right: 55px;
-   border: 3px solid var(--clr-primary);
-   
-
+   right: 45px;
+   border: 3.5px solid var(--clr-primary);
 }
 
 .m-heart {
