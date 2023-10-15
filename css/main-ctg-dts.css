@@ -142,6 +142,7 @@ nav {
 .menu-titles{
     font-family: Arial, Helvetica, sans-serif;
     margin: auto 78px;
+    margin-top: 50px;
     font-style: bold;
     font-size: var(--fs-md);
 }
@@ -160,7 +161,7 @@ nav {
 }
 
 .menu-buttons{
-   margin-top: 100px;
+   margin-top: 150px;
    margin-right: 70px;
 }
 .button{
@@ -184,7 +185,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: auto 50px auto 75px;
+    margin: 20px 50px auto 75px;
     
 }
 
