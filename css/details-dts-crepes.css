@@ -162,7 +162,7 @@ nav {
 
 .recom-dish-a{
     display: flex;
-  padding: 35px 15px 25px 15px;  
+    padding: 35px 15px 25px 15px;  
 }
 
 .recom-dish-b{
@@ -181,6 +181,52 @@ nav {
     padding-left: 20px;
 }
 
+.second-container{
+    display: flex;
+}
+
+.dish-info-container{
+    width: 880px;
+}
+
+#title-style{
+    font-size: var(--fs-lg);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    margin-top: 50px;
+    margin-left: 80px;
+}
+
+#desc-style{
+    font-size: var(--fs-nm);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 80px;
+}
+
+.popular-container{
+    position: relative;
+    height: 200px;
+}
+
+.popular-title-zone{
+    background-color: var(--clr-white);
+    width: 460px;
+    margin: 30px 80px 0 40px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+
+.popular-images-container{
+    background-color: var(--clr-white);
+    border: 1px solid #ccc;
+    border-top: none;
+    height: 630px;
+    width: 460px;
+    margin-left: 40px;
+    margin-top: 0;
+}
 
 
 
