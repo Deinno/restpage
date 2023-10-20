@@ -1,6 +1,17 @@
-.hero-container{
+.hero-container-a{
     display: grid;
     background: url(../../imgs/banner-ratatouille.jpg); 
+    padding: 0; 
+    background-size: cover;
+    color: var(--clr-white);
+    text-align: center;
+    width: 100%;
+    
+}
+
+.hero-container-b{
+    display: grid;
+    background: url(../../imgs/banner-creme-brulee.jpg); 
     padding: 0; 
     background-size: cover;
     color: var(--clr-white);
