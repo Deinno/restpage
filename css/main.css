@@ -1,5 +1,5 @@
 /* ALL IMPORTS */
-@import url(./vars.css);
+@import url(../css/abstracts/vars.css);
 
 @import url(./base/base.css);
 
@@ -16,3 +16,148 @@
 
 @import url(./layout/footer.css);
 
+
+
+/*media querys */
+
+@media (max-width: 430px) {
+
+    .nav-container{
+        width: 100%;
+    }
+
+
+    #nav-logo{
+        width: 10vw;
+    }
+
+    #logo-text{
+        padding-left: 5%;
+    }
+
+    .icons{
+        display: none;
+    }
+
+    .hero-title{
+        width: 100vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-text{
+        width: 100vw; 
+    }
+
+    .hero-container{
+        width: 100%;
+        height: 120vh;
+        align-content: center;
+        background: url(../imgs/rsp-banner-creme-brulee.jpg);
+        background-repeat: no-repeat;
+    }
+
+    .search-container {
+        max-width: 400px;
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-top: 20%;
+    }
+
+    #search-input {
+        font-size: var(--fs-md);
+    }
+
+    #search-button {
+        font-size: var(--fs-md);
+    }
+    
+    .menu-section{
+        width: 100vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .mobile-btn{
+        position: fixed;
+        top: 3rem;
+        right: 4rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        z-index: 3;
+    }
+
+    .mobile-btn > span,
+    .mobile-btn > span::before,
+    .mobile-btn > span::after{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: .3rem;
+        background: var(--clr-secondary);
+        transition-duration: .25s;
+    }
+
+    .mobile-btn > span::before{
+        content: '';
+        top: -.5rem;
+    }
+
+    .mobile-btn > span::after{
+        content: '';
+        top: .5rem;
+    }
+
+    /*mobile check*/
+    .mobile-check{
+        opacity: 0;
+        position: fixed;
+        top: 2.5rem;
+        right: 4.25rem;
+        z-index: 4;
+    }
+
+    .mobile-check:checked + .mobile-btn > span{
+        transform: rotate(45deg);
+    }
+
+    .mobile-check:checked + .mobile-btn > span::before{
+        top: 0;
+        transform: rotate(0deg);
+    }
+
+    .mobile-check:checked + .mobile-btn > span::after{
+        top: 0;
+        transform: rotate(-90deg);
+    }
+
+    .mobile-check:checked ~ .menu{
+        right: 0;
+    }
+    /*mobile check*/
+    
+    .menu{
+        display: grid;
+        position: fixed;
+        margin: 0;
+        top: 0;
+        right: -20rem;
+        width: 50%;
+        height: 100vh;
+        background: var(--clr-primary);
+        align-content: center;
+        text-align: left;
+        padding-left: 2rem;
+        z-index: 2;
+        transition: right .25s;
+    }
+    
+}

@@ -106,3 +106,56 @@
 .catalog-titles h3 {
     margin-top: 0;
 }
+
+
+/*category page */
+
+.title-zone{
+    background-color: var(--clr-white);
+    width: 460px;
+    margin: 100px 80px 0 40px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+
+
+#main-title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-nm);
+    color: var(--clr-primary);
+    padding: 15px 0 5px 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    margin-bottom: auto;
+}
+
+#recom-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-sm);
+    color: var(--clr-black);
+    padding-left: 20px;
+}
+
+#title-style{
+    font-size: var(--fs-lg);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    margin-top: 50px;
+    margin-left: 80px;
+}
+
+#desc-style{
+    font-size: var(--fs-nm);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 80px;
+}
+
+.popular-title-zone{
+    background-color: var(--clr-white);
+    width: 460px;
+    margin: 30px 80px 0 40px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}

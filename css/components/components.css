@@ -1,3 +1,40 @@
+.search-container {
+    display: flex;
+    max-width: 37rem;
+    margin: 6.25rem auto 0;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-lg);
+    
+
+}
+
+#search-input {
+    flex-grow: 5;
+    padding: 0.625rem;
+    border: 0.625rem solid var(--clr-main-bg);
+    border-radius: 3.125rem 3.125rem 3.125rem 3.125rem;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-lg);
+    margin: 3rem auto;
+}
+
+.search-button {
+    position: absolute;
+    background-color: var(--clr-primary);
+    color: #fff;
+    border: none;
+    border-radius: 1.875rem 1.875rem 1.875rem 1.875rem;
+    padding: 0.625rem 2.3125rem;
+    cursor: pointer;
+    outline: none;
+    right: 0.625rem;
+    top: 3.650rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-lg);
+}
+
 #left-of-button{
     position: relative;
     background-color: var(--clr-primary);
@@ -59,6 +96,7 @@
     margin-top: 6.25rem;
     margin-right: 4.375rem;
  }
+
  .button{
      background-color: var(--clr-white);
      border: none;
@@ -88,7 +126,7 @@
      
      width: 2.063rem; /* Establece el ancho deseado para las imágenes de estrellas */
      height: 2.063rem;
-     background-image: url(../imgs/icons/corazon-rojo.svg);
+     background-image: url(../../imgs/icons/corazon-rojo.svg);
      background-size: 70%; /* Reduce el tamaño de la imagen de fondo al 70% del botón */
      background-repeat: no-repeat;
      background-position:center;
@@ -99,13 +137,13 @@
  }
   
  .m-heart:hover{
-     background-image: url(../imgs/icons/corazon-blanco.svg);
+     background-image: url(../../imgs/icons/corazon-blanco.svg);
  }
  
  .m-cart{
      width: 2.063rem; /* Establece el ancho deseado para las imágenes de estrellas */
      height: 2.063rem;
-     background-image: url(../imgs/icons/carrito-de-compras-rojo.svg);
+     background-image: url(../../imgs/icons/carrito-de-compras-rojo.svg);
      background-size: 70%; /* Reduce el tamaño de la imagen de fondo al 70% del botón */
      background-repeat: no-repeat;
      background-position:center;
@@ -117,7 +155,7 @@
  }
  
  .m-cart:hover{
-     background-image: url(../imgs/icons/carrito-de-compras.svg);
+     background-image: url(../../imgs/icons/carrito-de-compras.svg);
  }
 
  .catalog-button {
