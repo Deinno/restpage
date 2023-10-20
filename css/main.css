@@ -20,6 +20,14 @@
 
 /*media querys */
 
+@media (max-width: 390px){
+    .logo{
+        margin-top: 10%;
+    }
+
+}
+
+
 @media (max-width: 430px) {
 
     .nav-container{
@@ -48,6 +56,7 @@
 
     .hero-text{
         width: 100vw; 
+        height: 5rem;
     }
 
     .hero-container-a{
@@ -60,7 +69,7 @@
 
     .hero-container-b{
         width: 100%;
-        height: 120vh;
+        height: 105vh;
         align-content: center;
         background: url(../imgs/rsp-banner-creme-brulee.jpg);
         background-repeat: no-repeat;
@@ -68,24 +77,42 @@
 
     .search-container {
         max-width: 400px;
+        max-height: 10rem;
         margin-right: 5%;
         margin-left: 5%;
-        margin-top: 20%;
+        margin-top: 10%;
     }
 
     #search-input {
-        font-size: var(--fs-md);
+        font-size: var(--fs-nm);
     }
 
-    #search-button {
-        font-size: var(--fs-md);
+    .search-button {
+        font-size: var(--fs-nm);
     }
     
     .menu-section{
         width: 100vw;
     }
 
+    .menu-buttons{
+        display: grid;
+        margin-bottom: 2rem;
+        margin-left: 2rem;
+     }
 
+     .menu-titles{
+        margin-left: 2rem;
+     }
+
+     .menu-container{
+        display: grid;
+        margin-left: 3rem;
+    }
+
+    .footer-info{
+        margin-right: 2rem;
+    }
 
 
 

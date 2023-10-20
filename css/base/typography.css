@@ -110,9 +110,19 @@
 
 /*category page */
 
-.title-zone{
+.title-zone-a{
     background-color: var(--clr-white);
-    width: 460px;
+    width: 30vw;
+    height: 30vh;
+    margin: 100px 80px 0 40px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+
+.title-zone-b{
+    background-color: var(--clr-white);
+    width: 30vw;
+    height: 10vh;
     margin: 100px 80px 0 40px;
     border: 1px solid #ccc;
     border-bottom: none;
