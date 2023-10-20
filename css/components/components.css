@@ -162,3 +162,7 @@
     margin-top: 0.625rem; /* Espacio entre la imagen y el botón */
     width: 18rem;
 }
+
+.mobile-check{
+    opacity: 0;
+}
