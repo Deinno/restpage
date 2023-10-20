@@ -161,6 +161,12 @@
  .catalog-button {
     margin-top: 0.625rem; /* Espacio entre la imagen y el botón */
     width: 18rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--clr-primary);
+    font-size: var(--fs-md);
+    margin-top: 3.125rem;
+    padding: 1.25rem 1rem;
+    
 }
 
 .mobile-check{
