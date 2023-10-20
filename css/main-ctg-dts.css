@@ -48,13 +48,13 @@ nav {
 }
 
 .menu {
-    list-style: none; /* Elimina las viñetas de la lista */
+    list-style: none; 
     display: flex;
     margin-left: 100px;
 }
 
 .menu li {
-    margin-right: 20px; /* Espacio entre elementos del menú */
+    margin-right: 20px; 
 }
 
 .menu a {
@@ -63,9 +63,9 @@ nav {
     font-weight: bold;
 }
 
-/* Cambiar el color del enlace cuando se pasa el cursor por encima */
+
 .menu a:hover {
-    color: #333; /* Color de enlace al pasar el cursor */
+    color: #333; 
 }
 
 .icons{
@@ -85,7 +85,6 @@ nav {
 .hero-title{
     font-family: Arial, Helvetica, sans-serif;
     font-size: clamp(var(--fs-lg),4rem,var(--fs-xl)); 
-    /*width: 15ch; /* esta unidad "CH" mide la cantidad de caracteres*/
     margin: 100px 0 0 0 ;
 }
 
@@ -93,8 +92,7 @@ nav {
     font-family: Arial, Helvetica, sans-serif;
     font-size: var(--fs-md);
     width: clamp(100ch, 50%, 55ch);
-    margin: 90px auto 2rem; 
-    
+    margin: 90px auto 2rem;  
 }
 
 .search-container {
@@ -104,8 +102,6 @@ nav {
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
     font-size: var(--fs-lg);
-    
-
 }
 
 #search-input {
@@ -191,14 +187,14 @@ nav {
 
 .menu-cart{
     display: flex;
-    flex: 0 0 23%;/* Para que cada contenedor ocupe la mitad del espacio */
+    flex: 0 0 23%;
     border: 1px solid #ccc;
     margin: auto 5px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
-    overflow: hidden; /* Evita que el contenido se desborde */
-    height: 28rem;
+    overflow: hidden; 
+    height: 66vh;
     flex-direction: column;
     margin-bottom: 30px;
 
@@ -240,9 +236,9 @@ nav {
 }
 
 .rating-container img {
-    width: 20px; /* Establece el ancho deseado para las imágenes de estrellas */
-    height: 20px; /* Establece la altura deseada para las imágenes de estrellas */
-    margin: 5px; /* Agrega espaciado entre las imágenes de estrellas */
+    width: 20px; 
+    height: 20px; 
+    margin: 5px; 
 }
 
 .m-see-more{
@@ -255,10 +251,10 @@ nav {
     
     
     
-    width: 33px; /* Establece el ancho deseado para las imágenes de estrellas */
+    width: 33px; 
     height: 33px;
     background-image: url(../imgs/icons/corazon-rojo.svg);
-    background-size: 70%; /* Reduce el tamaño de la imagen de fondo al 70% del botón */
+    background-size: 70%; 
     background-repeat: no-repeat;
     background-position:center;
     position: relative;
@@ -272,10 +268,10 @@ nav {
 }
 
 .m-cart{
-    width: 33px; /* Establece el ancho deseado para las imágenes de estrellas */
+    width: 33px; 
     height: 33px;
     background-image: url(../imgs/icons/carrito-de-compras-rojo.svg);
-    background-size: 70%; /* Reduce el tamaño de la imagen de fondo al 70% del botón */
+    background-size: 70%; 
     background-repeat: no-repeat;
     background-position:center;
     position: relative;
@@ -373,4 +369,146 @@ nav {
 .cta-app-container{
     display: flex;
     gap: 0.5rem;
+}
+
+@media (max-width: 430px) {
+
+    .nav-container{
+        width: 100%;
+    }
+
+
+    #nav-logo{
+        width: 10vw;
+    }
+
+    #logo-text{
+        padding-left: 5%;
+    }
+
+    .icons{
+        display: none;
+    }
+
+    .hero-title{
+        width: 100vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-text{
+        width: 100vw; 
+    }
+
+    .hero-container{
+        width: 100%;
+        height: 120vh;
+        align-content: center;
+        background: url(../imgs/rsp-banner-creme-brulee.jpg);
+        background-repeat: no-repeat;
+    }
+
+    .search-container {
+        max-width: 400px;
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-top: 20%;
+    }
+
+    #search-input {
+        font-size: var(--fs-md);
+    }
+
+    #search-button {
+        font-size: var(--fs-md);
+    }
+    
+    .menu-section{
+        width: 100vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .mobile-btn{
+        position: fixed;
+        top: 3rem;
+        right: 4rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        z-index: 3;
+    }
+
+    .mobile-btn > span,
+    .mobile-btn > span::before,
+    .mobile-btn > span::after{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: .3rem;
+        background: var(--clr-secondary);
+        transition-duration: .25s;
+    }
+
+    .mobile-btn > span::before{
+        content: '';
+        top: -.5rem;
+    }
+
+    .mobile-btn > span::after{
+        content: '';
+        top: .5rem;
+    }
+
+    /*mobile check*/
+    .mobile-check{
+        opacity: 0;
+        position: fixed;
+        top: 2.5rem;
+        right: 4.25rem;
+        z-index: 4;
+    }
+
+    .mobile-check:checked + .mobile-btn > span{
+        transform: rotate(45deg);
+    }
+
+    .mobile-check:checked + .mobile-btn > span::before{
+        top: 0;
+        transform: rotate(0deg);
+    }
+
+    .mobile-check:checked + .mobile-btn > span::after{
+        top: 0;
+        transform: rotate(-90deg);
+    }
+
+    .mobile-check:checked ~ .menu{
+        right: 0;
+    }
+    /*mobile check*/
+    
+    .menu{
+        display: grid;
+        position: fixed;
+        margin: 0;
+        top: 0;
+        right: -20rem;
+        width: 50%;
+        height: 100vh;
+        background: var(--clr-primary);
+        align-content: center;
+        text-align: left;
+        padding-left: 2rem;
+        z-index: 2;
+        transition: right .25s;
+    }
+    
 }
