@@ -1,0 +1,47 @@
+.hero-container{
+    display: grid;
+    background: url(../../imgs/banner-ratatouille.jpg); 
+    padding: 0; 
+    background-size: cover;
+    color: var(--clr-white);
+    text-align: center;
+    width: 100%;
+    
+}
+
+.search-container {
+    display: flex;
+    max-width: 37rem;
+    margin: 6.25rem auto 0;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-lg);
+    
+
+}
+
+#search-input {
+    flex-grow: 5;
+    padding: 0.625rem;
+    border: 0.625rem solid var(--clr-main-bg);
+    border-radius: 3.125rem 3.125rem 3.125rem 3.125rem;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-lg);
+    margin: 3rem auto;
+}
+
+#search-button {
+    position: absolute;
+    background-color: var(--clr-primary);
+    color: #fff;
+    border: none;
+    border-radius: 1.875rem 1.875rem 1.875rem 1.875rem;
+    padding: 0.625rem 2.3125rem;
+    cursor: pointer;
+    outline: none;
+    right: 0.625rem;
+    top: 3.650rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-lg);
+}

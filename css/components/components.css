@@ -1,0 +1,126 @@
+#left-of-button{
+    position: relative;
+    background-color: var(--clr-primary);
+    border: none;
+    color: var(--clr-white);
+    font-weight: bolder;
+    font-size: 2rem;
+    top: 8.75rem;
+    left: 0.938rem;
+    cursor: pointer;
+
+}
+
+#right-of-button{
+    position: relative;
+    background-color: var(--clr-primary);
+    border: none;
+    color: var(--clr-white);
+    font-weight: bolder;
+    font-size: 2rem;
+    top: 8.75rem;
+    left: 1.563rem;
+    cursor: pointer;
+
+}
+
+.promo-icons{
+    display: flex;
+    width: 9.375rem;
+    position: absolute;
+    bottom: 0.625rem;
+    right: 1.25rem;
+}
+
+.icon-img{
+    height: 1.25rem;
+}
+
+.icon-cart{
+    height: 1.25rem;
+    margin-right: 0.125rem;
+}
+
+.promo-icon{
+    background: var(--clr-primary);
+    align-items: center;
+    height: 1.938rem;
+    justify-content: center;
+    display: flex;
+    flex: 0 0 20%;
+    margin: auto 0.25rem;
+}
+
+.eye{
+    height: 0.938rem;
+}
+
+.menu-buttons{
+    margin-top: 6.25rem;
+    margin-right: 4.375rem;
+ }
+ .button{
+     background-color: var(--clr-white);
+     border: none;
+     color: var(--clr-primary);
+     font-weight: bold;
+     font-size: 1rem;
+     cursor: pointer;
+     border: 0.125rem solid var(--clr-primary);
+     padding: 0.25rem 0.625rem;
+ }
+ 
+ .button:hover{
+     background-color: var(--clr-primary);
+     color:var(--clr-white);
+ 
+ }
+
+ .m-see-more{
+    position: relative;
+    right: 2.813rem;
+    border: 0.219rem solid var(--clr-primary);
+ }
+ 
+ .m-heart {
+     
+     
+     
+     width: 2.063rem; /* Establece el ancho deseado para las imágenes de estrellas */
+     height: 2.063rem;
+     background-image: url(../imgs/icons/corazon-rojo.svg);
+     background-size: 70%; /* Reduce el tamaño de la imagen de fondo al 70% del botón */
+     background-repeat: no-repeat;
+     background-position:center;
+     position: relative;
+     left: 2.5rem;
+     padding: 0.625rem;
+     border: 0.188rem solid var(--clr-primary);
+ }
+  
+ .m-heart:hover{
+     background-image: url(../imgs/icons/corazon-blanco.svg);
+ }
+ 
+ .m-cart{
+     width: 2.063rem; /* Establece el ancho deseado para las imágenes de estrellas */
+     height: 2.063rem;
+     background-image: url(../imgs/icons/carrito-de-compras-rojo.svg);
+     background-size: 70%; /* Reduce el tamaño de la imagen de fondo al 70% del botón */
+     background-repeat: no-repeat;
+     background-position:center;
+     position: relative;
+     left: 2.313rem;
+     padding: 0.625rem;
+     border: 0.188rem solid var(--clr-primary);
+ 
+ }
+ 
+ .m-cart:hover{
+     background-image: url(../imgs/icons/carrito-de-compras.svg);
+ }
+
+ .catalog-button {
+    margin-top: 0.625rem; /* Espacio entre la imagen y el botón */
+    width: 18rem;
+}

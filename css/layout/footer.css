@@ -1,0 +1,82 @@
+.footer{
+    background: var(--clr-secondary);
+    margin-top: 5rem;
+    display: grid;
+}
+
+.footer-container{
+    display: grid;
+}
+
+.footer-logo{
+    display: flex;
+}
+
+#ft-logo{
+    width: 3.125rem;
+    margin: 3.125rem 0.625rem 0.5rem 4.375rem;
+}
+
+#footer-logo-text{
+    margin-left: 1.25rem;
+    margin-top: 4.375rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-lg);
+    color: var(--clr-white);
+}
+
+.footer-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+}
+
+.footer-info{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-sm);
+    color: var(--clr-white);
+    margin-left: 5rem;  
+    margin-top: 1.25rem;
+    
+}
+
+.footer-legal{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-sm);
+    color: var(--clr-white);
+    margin-top: 3.125rem;
+}
+
+.footer-links{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-sm);
+    color: var(--clr-white);
+}
+
+.nav-bottom-list{
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-bottom-link{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-sm);
+    color: var(--clr-white);
+}
+
+.download-app{
+    display: grid;
+    margin-top: 3.125rem;
+    margin-left: 5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-sm);
+    color: var(--clr-white);
+}
+
+.cta-app-container{
+    display: flex;
+    gap: 0.5rem;
+}

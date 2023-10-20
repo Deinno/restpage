@@ -1,0 +1,108 @@
+.hero-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-md);
+    width: clamp(100ch, 50%, 55ch);
+    margin: 4rem auto 2rem; 
+    
+}
+
+
+
+#offer-title{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--clr-primary);
+    font-size: var(--fs-md);
+    font-style: italic;
+    margin-top: 6.25rem;
+    
+}
+
+#offer-titles{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto 4.875rem;
+    font-style: bold;
+    font-size: var(--fs-md);
+}
+#offer-subtitle{
+    margin-top: 0;
+}
+
+.hero-title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(var(--fs-lg),4rem,var(--fs-xl)); 
+    /*width: 15ch; /* esta unidad "CH" mide la cantidad de caracteres*/
+    margin: 6rem 0 0 0 ;
+}
+
+.promotion h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    margin-top: 1.5rem;
+    
+}
+
+.promotion p {
+    font-size: 0.9rem;
+    margin: 0;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+
+.discount h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+    margin: 0.625rem 0.625rem;
+    color: var(--clr-white);
+
+}
+
+.menu-titles{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto 4.875rem;
+    font-style: bold;
+    font-size: var(--fs-md);
+}
+
+.menu-titles h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--clr-primary);
+    font-size: var(--fs-md);
+    font-style: italic;
+    margin-top: 3.125rem;
+}
+
+.menu-titles h3 {
+
+    margin-top: 0;
+}
+
+.menu-info h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-md);
+}
+
+.menu-info h3{
+    font-size: var(--fs-md);
+    color: var(--clr-primary);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.catalog-titles{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto 4.875rem;
+    font-style: bold;
+    font-size: var(--fs-md);
+}
+
+.catalog-titles h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--clr-primary);
+    font-size: var(--fs-md);
+    font-style: italic;
+    margin-top: 3.125rem;
+}
+
+.catalog-titles h3 {
+    margin-top: 0;
+}

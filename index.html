@@ -12,10 +12,13 @@
 <body>
     <header class="hero-container">
         <nav>
-            <div class="logo">
-                <img id="nav-logo" src="imgs/identificador-blanco.svg" alt="Logo">
-                <h2 id="logo-text">Cuisinette</h2>
-            </div>
+            <a class="logo" href="#"><img id="nav-logo" src="imgs/identificador-blanco.svg" alt="Logo"></a>
+                
+                <!--<h2 id="logo-text">Cuisinette</h2>-->
+            
+            <input class="mobile-check" type="checkbox">
+            <label class="mobile-btn"></label>
+            <span></span>
             <ul class="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</aBbr></a></li>
@@ -143,8 +146,8 @@
             <button class="button">Desserts</button>
             </div>
         </section>
-            <div class="menu-carts">
-            <div class="menu-cart">
+            <div class="menu-container">
+            <div class="m-dish-container">
                <div class="menu-image">
                 <img src="./imgs/drinks/normal-drink-coffee.jpg" alt="">
                </div>
@@ -167,7 +170,7 @@
                </div>
             </div>
 
-            <div class="menu-cart">
+            <div class="m-dish-container">
                 <div class="menu-image">
                  <img src="./imgs/drinks/normal-drink-french-connection.jpg" alt="">
                 </div>
@@ -190,7 +193,7 @@
                 </div>
              </div>
 
-             <div class="menu-cart">
+             <div class="m-dish-container">
                 <div class="menu-image">
                  <img src="./imgs/appetizer/normal-appetizer-bullabesa-soup.jpg" alt="">
                 </div>
@@ -213,7 +216,7 @@
                 </div>
              </div>
 
-             <div class="menu-cart">
+             <div class="m-dish-container">
                 <div class="menu-image">
                  <img src="./imgs/appetizer/normal-appetizer-dubarry-cream.jpg" alt="">
                 </div>
@@ -237,7 +240,7 @@
              </div>
 
 
-             <div class="menu-cart">
+             <div class="m-dish-container">
                 <div class="menu-image">
                  <img src="./imgs/meals/normal-meal-steak-frites.jpg" alt="">
                 </div>
@@ -260,7 +263,7 @@
                 </div>
              </div>
  
-             <div class="menu-cart">
+             <div class="m-dish-container">
                  <div class="menu-image">
                   <img src="./imgs/meals/normal-meal-merluza.jpg" alt="">
                  </div>
@@ -283,7 +286,7 @@
                  </div>
               </div>
  
-              <div class="menu-cart">
+              <div class="m-dish-container">
                  <div class="menu-image">
                   <img src="./imgs/desserts/normal-dessert-tarta-raspberry.jpg" alt="">
                  </div>
@@ -306,7 +309,7 @@
                  </div>
               </div>
  
-              <div class="menu-cart">
+              <div class="m-dish-container">
                  <div class="menu-image">
                   <img src="./imgs/desserts/normal-dessert-souffle.jpg" alt="">
                  </div>
@@ -335,7 +338,7 @@
             <h3>Check Out All We Have In Table!</h3>
         </div>
 
-        <div class="catalog-buttons-container">
+        <!--<div class="catalog-buttons-container">
 
             
             <div>
@@ -359,6 +362,34 @@
             </div>
             
         </div>
+    -->
+
+    <div class="catalog-container">
+        <div class="catalog-item">
+            <img class="catalog-image" src="./imgs/french-76.jpg" alt="Drinks Img">
+            <button class="catalog-button button ">
+                <h2>Drinks</h2>
+            </button>
+        </div>
+        <div class="catalog-item">
+            <img class="catalog-image" src="./imgs/duck.jpg" alt="Appetizers Img">
+            <button class="catalog-button button ">
+                <h2>Appetizers</h2>
+            </button>
+        </div>
+        <div class="catalog-item">
+            <img class="catalog-image" src="./imgs/lenguado-meuniere.jpg" alt="Meals Img">
+            <button class="catalog-button button">
+                <h2>Meals</h2>
+            </button>
+        </div>
+        <div class="catalog-item">
+            <img class="catalog-image" src="./imgs/creme-brulee.jpg" alt="Desserts Img">
+            <button class="catalog-button button ">
+                <h2>Desserts</h2>
+            </button>
+        </div>
+    </div>
 
 
 

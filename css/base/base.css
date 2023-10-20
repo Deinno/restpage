@@ -1,0 +1,6 @@
+body{
+    background: var(--clr-main-bg);
+    display: grid;
+    margin: 0;
+    padding: 0;
+}
