@@ -14,15 +14,13 @@
     <?php
     // Puedes agregar código PHP aquí para realizar operaciones en el servidor antes de que se genere el HTML
     // Por ejemplo, puedes obtener datos de la base de datos y almacenarlos en variables para su uso en HTML
-    $pageTitle = "Main Page";
-    $logoSrc = "imgs/identificador-blanco.svg";
     ?>
 
 
     <header class="hero-container-a">
         <nav class="nav-container">
             <div class="logo">
-                <img id="nav-logo" src="<?php echo $logoSrc; ?>" alt="Logo">
+                <img id="nav-logo" src="imgs/identificador-blanco.svg" alt="Logo">
                 <!--<h2 id="logo-text">Cuisinette</h2>-->
             </div>
                 <input class="mobile-check" type="checkbox">
