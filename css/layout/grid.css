@@ -232,4 +232,34 @@
     border-top: none;
 }
 
+.login-section{
+    display: grid;
+    position: relative;
+    background-color: var(--clr-white);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-nm);
+    align-content: center;
+    width: 40vw;
+    height: 35vh;
+    padding: 2rem;
+    padding-top: 1rem;
+    margin: auto;
+    margin-bottom: 10%;
+    align-content: center;
+}
+
+.signin-section{
+    display: grid;
+    position: relative;
+    background-color: var(--clr-white);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-nm);
+    align-content: center;
+    width: 40vw;
+    height: 45vh;
+    padding: 2rem;
+    margin: auto;
+    align-content: center;
+}
+
 /*details page*/
