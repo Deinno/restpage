@@ -190,3 +190,13 @@
     margin: auto;
     margin-top: 5%;
 }
+
+.confir-btn{
+    display: block;
+    width: 50%;
+    margin: auto;
+    margin-top: 10%;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: all .3s ease-in-out;
+}
