@@ -1,3 +1,34 @@
+<?php 
+    require_once './database.php';
+
+    if($_POST){
+
+        //var_dump($_POST);
+
+        $item = $database->select("tb_dishes",[
+            "[>]tb_amount"=>["id_amount" => "id_amount"],
+            "[>]tb_categories"=>["id_category" => "id_category"]
+        ],[
+            "tb_dishes.id_dishes",
+            "tb_dishes.dish_lname",
+            "tb_dishes.dish_sname",
+            "tb_dishes.dish_image",
+            "tb_dishes.dish_description",
+            "tb_dishes.dish_price",
+            "tb_amount.id_amount",
+            "tb_amount.amount_category",//si es individual, de pareja o familiar
+            "tb_amount.amount_description",//explica la cantidad de porciones
+            "tb_categories.id_category",
+            "tb_categories.category_name",//bebida, entrada, comida o postre
+            "tb_categories.category_description",
+        ],[
+            "id_dishes"=>$_POST["id_dishes"]
+        ]);
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
