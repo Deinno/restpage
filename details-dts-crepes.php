@@ -1,3 +1,6 @@
+<?php
+include ".parts/header.php";      
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,31 +11,6 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <?php
-    // Puedes agregar código PHP aquí para realizar operaciones en el servidor antes de que se genere el HTML
-    // Por ejemplo, puedes obtener datos de la base de datos y almacenarlos en variables para su uso en HTML
-    ?>
-
-    <header>
-        <nav>
-            <div class="logo">
-                <img id="nav-logo" src="imgs/identificador-blanco.svg" alt="Logo">
-                <!--<h2 id="logo-text">Cuisinette</h2>-->
-            </div>
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Sales</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="#">Download</a></li>
-            </ul>
-            <div class="icons">
-                <img id="shopping-cart" src="imgs/icons/anadir-a-la-cesta.svg" alt="Shopping Cart">
-                <img id="user-menu" src="imgs/icons/usuario.svg" alt="User Menu">
-            </div>
-        </nav>
-    </header>
-
             <section class="main-container">
                 <div class="img-container">
                     <img class="main-image" src="./imgs/desserts/big-dessert-crepes.jpg" alt="Crepes">

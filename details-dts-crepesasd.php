@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+    <?php
+    // Puedes agregar código PHP aquí para realizar operaciones en el servidor antes de que se genere el HTML
+    // Por ejemplo, puedes obtener datos de la base de datos y almacenarlos en variables para su uso en HTML
+    ?>
 
     <header>
         <nav>
