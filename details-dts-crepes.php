@@ -1,5 +1,5 @@
 <?php
-include ".parts/header.php";      
+include "./parts/header.php";      
 ?>
 <!DOCTYPE html>
 <html lang="en">
