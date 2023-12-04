@@ -171,8 +171,8 @@
 
 .popular-title-zone{
     background-color: var(--clr-white);
-    width: 460px;
-    margin: 30px 80px 0 40px;
+    max-width: 40vw;
+    width: 100%;
     border: 1px solid #ccc;
     border-bottom: none;
 }

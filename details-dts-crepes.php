@@ -1,5 +1,69 @@
 <?php
-include "./parts/header.php";      
+    require_once './database.php';
+
+     $link = "";
+     $url_params = "";
+     $lang = "";
+    
+    
+    if($_GET){
+       
+        if(isset($_GET["lang"]) && $_GET["lang"] == "fr"){
+        $item = $database->select("tb_dishes",[
+            "[>]tb_categoryes"=>["id_category" => "id_category"],
+            "[>]tb_person_qty"=>["id_qty" => "id_qty"]
+        ],[
+            "tb_dishes.id_dish",
+            "tb_dishes.nm_dish_fr",
+            "tb_dishes.img_dish",
+            "tb_dishes.description_dish_fr",
+            "tb_dishes.price_dish",
+            "tb_categoryes.nm_category",
+            "tb_person_qty.nm_person_qty",
+            "tb_camping_categories.camping_category_description",
+        ],[
+            "id_dish"=>$_GET["id"]
+        ]);
+        $item[0] ["nm_dish"] = $item[0]["nm_dish_tr"];
+        $item[0] ["description_dish"] = $item[0]["description_dish_tr"];
+
+        $lang = "EN";
+        $url_params = "id=".$item[0]["id_dish"];
+    }else{
+        $item = $database->select("tb_dishes",[
+        "[>]tb_categoryes"=>["id_category" => "id_category"],
+        "[>]tb_person_qty"=>["id_qty" => "id_qty"]
+    ],[
+        "tb_dishes.id_dish",
+        "tb_dishes.nm_dish",
+        "tb_dishes.img_dish",
+        "tb_dishes.description_dish",
+        "tb_dishes.price_dish",
+        "tb_categoryes.nm_category",
+        "tb_person_qty.nm_person_qty",
+        "tb_camping_categories.camping_category_description",
+    ],[
+        "id_dish"=>$_GET["id"]
+
+    ]);
+    $lang = "TR";
+    $url_params = "id=".$item[0]["id_dish"]."&lang=tr";
+}
+
+        if(isset($_SESSION["isLoggedIn"])){
+           $link = "book.php?id=".$item[0]["id_dish"].""; 
+        }else{
+            $link = "./forms.php";
+
+        }
+
+        //
+
+       /* // Reference: https://medoo.in/api/select
+        $tours = $database->select("tb_destination_activities","*");
+    */
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,12 +75,16 @@ include "./parts/header.php";
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-            <section class="main-container">
+
+<?php
+include "./parts/header.php";      
+?>
+            <div class="main-container">
                 <div class="img-container">
                     <img class="main-image" src="./imgs/desserts/big-dessert-crepes.jpg" alt="Crepes">
                 </div>
-
-                <div class="popular-container">
+                
+             <div class="popular-container">
                     <div class="popular-title-zone">
                         <h2 id="main-title">Most Popular</h2>
                     </div>
@@ -27,65 +95,13 @@ include "./parts/header.php";
                         <p class="recom-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
                     </div>
 
-                    <div class="recom-dish-b">
-                        <img class="recom-img" src="./imgs/relleno.jpg" alt="Coffee">
-                        <p class="recom-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
-                    </div>
-
-                    <div class="recom-dish-b">
-                        <img class="recom-img" src="./imgs/relleno.jpg" alt="Coffee">
-                        <p class="recom-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
-                    </div>
-
-                    <div class="recom-dish-b">
-                        <img class="recom-img" src="./imgs/relleno.jpg" alt="Coffee">
-                        <p class="recom-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
-                    </div>
-
-                    <div class="recom-dish-b">
-                        <img class="recom-img" src="./imgs/relleno.jpg" alt="Coffee">
-                        <p class="recom-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
-                    </div>
-
                     </div>
 
                 </div>
 
-           <!-- <div class="search-container">
-                <div class="title-zone-a">
-                    <h2 id="main-title">Search</h2>
-                </div>
-                 <div class="bar-container">
-                    <input type="text" placeholder="Search..." id="search-input">
-                    <img class="search-button" src="./imgs/icons/lupa.svg" alt="">
-                </div>
-            </div>
 
-            <div class="recomendations-container">
-                <div class="title-zone-b">
-                    <h2 id="main-title">Recomendations</h2>
-                </div>
-                <div class="images-container">
-                    <div class="recom-dish-a">
-                        <img id="recom-img" src="./imgs/relleno.jpg" alt="Coffee">
-                        <p id="recom-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
-                    </div>
+             </div>
 
-                    <div class="recom-dish-b">
-                        <img id="recom-img" src="./imgs/relleno.jpg" alt="Coffee">
-                        <p id="recom-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
-                    </div>
-
-                    <div class="recom-dish-b">
-                        <img id="recom-img" src="./imgs/relleno.jpg" alt="Coffee">
-                        <p id="recom-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
-                    </div>
-                </div>
-
-                
-            </div>-->
-
-            </section>
 
             <section class="second-container">
 
@@ -96,26 +112,7 @@ include "./parts/header.php";
 
                     <p class="desc-style">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 
-                    <h2 class="title-style">Lorem ipsum dolor sit amet, consectetuer adipis</h2>
-
-                    <p class="desc-style">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                    
-                    <p class="desc-style">1. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-
-                    <p class="desc-style">2. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-
-                    <p class="desc-style">3. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-
-                    <p class="desc-style">4. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-
-                    <p class="desc-style">5. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-
-                    <p class="desc-style">6. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-
-                    <p class="desc-style">7. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-
-                    <p class="desc-style">8. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                </div>
+                  </div>
 
                 
 
