@@ -67,7 +67,7 @@
                     echo "</section>";
                 
                     echo "<div>";
-                        echo "<form action='confirmation.html' method='post'>";
+                        echo "<form action='confirmation.php' method='post'>";
                         
                             echo "<div class='dish'>";
                                 echo "<h3>Cuantity</h3>";
