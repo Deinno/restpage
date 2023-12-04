@@ -3,8 +3,6 @@
 
     if($_GET){
 
-        // Reference: https://medoo.in/api/select
-        // Note: don't delete the [>] 
         $item = $database->select("tb_dishes",[
             "[>]tb_amount"=>["id_amount" => "id_amount"],
             "[>]tb_categories"=>["id_category" => "id_category"]
@@ -43,37 +41,6 @@
         include "./parts/header.php";
     ?>
 
-    <!--<header class="hero-container-a">
-        <nav class="nav-container">
-            <div class="logo">
-                <img id="nav-logo" src="imgs/identificador-blanco.svg" alt="Logo">
-                <h2 id="logo-text">Cuisinette</h2>
-            </div>
-                <input class="mobile-check" type="checkbox">
-                <label class="mobile-btn">
-                    <span></span>
-                </label>
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Sales</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="#">Download</a></li>
-            </ul>
-            <div class="icons">
-                <img id="shopping-cart" src="imgs/icons/anadir-a-la-cesta.svg" alt="Shopping Cart">
-                <img id="user-menu" src="imgs/icons/usuario.svg" alt="User Menu">
-            </div>
-        </nav>
-        <h1 class="hero-title">Delicious food with a french fragrance</h1>
-        <p class="hero-text">We invite you to embark on an unforgettable culinary journey to the heart of France.
-            Our passion for authentic French cuisine is reflected in every dish we create.</p>
-        <div class="search-container">
-            <input type="text" placeholder="Search..." id="search-input">
-            <button type="button" class="search-button">Search</button>
-        </div>
-    </header>-->
-
     <main>
         <section >
             <div id="offer-titles">
@@ -87,14 +54,16 @@
                     echo "<section class='dish'>";
                         echo "<div class='dish-thumb'>";
                             echo "<!--Agregar la funcion para que aparezca la imagen del platillo que se seleccione-->";
-                            echo "<img class='dish-image' src='./imgs/drinks/big-drink-coffee.jpg' alt='DISH IMG'>";
+                            echo "<img class='dish-image' src='./imgs/".$item[0]["dish_image"]."' alt='".$item[0]["dish_lname"]"'>";
                         echo "</div>";
                         echo "<!--Agregar la funcion para que aparezca el nombre del platillo que se seleccione-->";
-                        echo "<h3>'DISH NAME'</h3>";
+                        echo "<h3>".$item[0]["dish_lname"]."</h3>";
                         echo "<!--Agregar la funcion para que aparezca la descripcion, la categoria, el tipo y el precio del platillo que se seleccione-->";
-                        echo "<p>'DISH DESCRIPTION'</p>";
-                        echo "<p>'DISH CATEGORY'</p>";
-                        echo "<p>'DISH PRICE'</p>";
+                        echo "<p>".$item[0]["dish_description"]."</p>";
+                        echo "<p>'Category: '</p>";
+                        echo "<p>".$item[0]["category_name"]."</p>";
+                        echo "<p>'Price: '</p>";
+                        echo "<p>".$item[0]["dish_price"]."</p>";
                     echo "</section>";
                 
                     echo "<div>";
