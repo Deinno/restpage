@@ -81,7 +81,7 @@
         $database->insert("tb_dishes",[
             "nm_dish"=> $menu_item_names[$i],
             "description_dish"=> $menu_item_descriptions[$i],
-            "img_dish"=> "image-".$filenames[$i].".jpg",
+            "img_dish"=> "./imgs./image-".$filenames[$i].".jpg",
             "price_dish"=> rand (1*10, 70*10)/10,
             "id_qty"=> "1",
             "id_category"=> "1"            

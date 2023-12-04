@@ -84,7 +84,8 @@
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
     overflow: hidden; 
-    height: 65vh;
+    max-width: 300px;
+    width: 80%;
     flex-direction: column;
     margin-bottom: 1.875rem;
 
@@ -96,15 +97,18 @@
     
 }
 .menu-image img{
-    width: auto;
-    height: auto;
+    width: 300px;
+    height: 200px;
     max-width: 100%;
+    object-fit: cover;
 }
 
 .menu-info{
-    padding: 0.625rem;
+    
+    padding: 0;
     flex: 1;
     background-color: var(--clr-white);
+    
    
 }
 
@@ -270,11 +274,7 @@
     padding: 2rem 1rem;
 }
 
-.dish-container{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: var(--fs-nm);
-}
+
 
 .order-container{
     margin-top: 2rem;
