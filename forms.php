@@ -90,7 +90,7 @@
                     <h3 >Log In</h3>
                     <p>Enter your registered username and password in the designated fields.</p>
 
-                    <form method="post" action="forms.html">
+                    <form method="post" action="forms.php">
                         <div>
                             <div>
                                 <label class="login-titles" for="username">Username</label>
@@ -114,6 +114,8 @@
                                 <input class="button" type="submit" value="LOG IN">
                             </div>
                         </div>
+                        <p><?php echo $message; ?></p>
+                        <input type="hidden" name="login" value="1">
 
                     </form>
                 </section>
