@@ -2,14 +2,14 @@
 if (isset($_POST['delete_id'])) {
     $delete_id = $_POST['delete_id'];
     $confirm = isset($_POST['confirm']) ? $_POST['confirm'] : '';
-    $conn = new mysqli('localhost', 'root', '', 'restpage');
+    $conn = new mysqli('localhost', 'root', '', 'proyecto');
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
     if ($confirm == 'Yes') {
-        $sql = "DELETE FROM tb_dishes WHERE id_dishes='$delete_id'";
+        $sql = "DELETE FROM tb_dishes WHERE id_dish='$delete_id'";
         if ($conn->query($sql) === TRUE) {
-            echo "Dish deleted correctly.";
+            echo "Platillo eliminado correctamente.";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
@@ -20,10 +20,10 @@ if (isset($_POST['delete_id'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dishes</title>
+    <title>Platillos</title>
 </head>
 <body>
-    <h1>Dishes</h1>
+    <h1>Platillos</h1>
     <ul>
         <?php
         // Fetching data from database
@@ -31,18 +31,18 @@ if (isset($_POST['delete_id'])) {
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
-        $sql = "SELECT id_dishes, dish_lname,dish_description,dish_image, dish_price FROM tb_dishes";
+        $sql = "SELECT id_dish, nm_dish,description_dish,img_dish,price_dish FROM tb_dishes";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<li>
-                    " . $row['id_dishes'] . "<br>
-                    " . $row['dish_lname'] . "<br>
-                    " . $row['dish_description'] . "<br>
-                    " . $row['dish_image'] . "<br>
-                    " . $row['dish_price'] . "<br>
+                    " . $row['id_dish'] . "<br>
+                    " . $row['nm_dish'] . "<br>
+                    " . $row['description_dish'] . "<br>
+                    " . $row['img_dish'] . "<br>
+                    " . $row['price_dish'] . "<br>
                     <form method='post' action=''>
-                        <input type='hidden' name='delete_id' value='" . $row['id__dishes'] . "'>
+                        <input type='hidden' name='delete_id' value='" . $row['id_dish'] . "'>
                         <input type='submit' name='confirm' value='Yes'>
                         <input type='submit' name='confirm' value='No'>
                     </form>
