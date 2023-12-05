@@ -1,5 +1,6 @@
 <?php 
     require_once 'database.php';
+     // Reference: https://medoo.in/api/select
     $items = $database->select("tb_dishes","*");
     ?>
 
@@ -12,7 +13,6 @@
     <title>Main Page</title>
 
     <link rel="stylesheet" href="./css/main.css">
-    
 </head>
 
 <body>
@@ -199,70 +199,9 @@ include "./parts/header.php";
 
     </main>
 
-    <footer class="footer">
-
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img id="ft-logo" src="imgs/identificador-blanco.svg" alt="Logo">
-                <h2 id="footer-logo-text">Cuisinette</h2>
-            </div>
-            <div class="footer-content">
-                <div class="footer-info">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy <br>
-                    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-            </div>
-
-            <div class="footer-links">
-                <div>
-                    <h3>Short Link</h3>
-                    <ul class="nav-bottom-list">
-                        <li><a class="nav-bottom-link" href="#">Lorem ipsum</a></li>
-                        <li><a class="nav-bottom-link" href="#">Lorem ipsum</a></li>
-                        <li><a class="nav-bottom-link" href="#">Lorem ipsum</a></li>
-                        <li><a class="nav-bottom-link" href="#">Lorem ipsum</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3>About Us</h3>
-                    <ul class="nav-bottom-list">
-                        <li><a class="nav-bottom-link" href="#">Lorem ipsum</a></li>
-                        <li><a class="nav-bottom-link" href="#">Lorem ipsum</a></li>
-                        <li><a class="nav-bottom-link" href="#">Lorem ipsum</a></li>
-                        <li><a class="nav-bottom-link" href="#">Lorem ipsum</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3>More Info</h3>
-                    <ul class="nav-bottom-list">
-                        <li><a class="nav-bottom-link" href="#">Lorem ipsum</a></li>
-                        <li><a class="nav-bottom-link" href="#">Lorem ipsum</a></li>
-                        <li><a class="nav-bottom-link" href="#">Lorem ipsum</a></li>
-                        <li><a class="nav-bottom-link" href="#">Lorem ipsum</a></li>
-                    </ul>
-                </div>
-            </div>
-            </div>
-
-            <section class="download-app">
-                <h3>Download our App</h3>
-                <div class="cta-app-container">
-                    <a href="#">
-                        <img src="./imgs/app-store.png" alt="Our app from App Store">
-                    </a>
-                    <a href="#">
-                        <img src="./imgs/google-play.png" alt="Our app from App Store">
-                    </a>
-                </div>
-            </section>
-
-            
-            <p class="footer-legal">© 2023. All rights reserved.</p>
-        </div>
-
-    </footer>
-
+    <?php 
+        include "./parts/footer.php";
+   ?>
 
     <script src="./js/main.js"></script>
 

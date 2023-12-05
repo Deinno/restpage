@@ -26,7 +26,7 @@ nav {
 .menu {
     list-style: none; /* Elimina las viñetas de la lista */
     display: flex;
-    margin-left: 2rem;
+    margin-left: -10rem;
     
 }
 

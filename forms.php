@@ -5,25 +5,14 @@
     if($_POST){
 
         if(isset($_POST["login"])){
-
-            $user = $database->select("tb_users","*",[
-                "usr"=> $_POST["username"]
-            ]);
-
-            if(count($user) > 0){
-                //validate password
-                if(password_verify($_POST["password"], $user[0]["pwd"])){
-                    session_start();
-                    $_SESSION["isLoggedIn"] = true;
-                    $_SESSION["fullname"] = $user[0]["fullname"];
-                    header("location: home.php");
-                }else{
-                    $message = "wrong username or password";
-                }
+            //validate if user already logged in
+            session_start();
+            if(isset($_SESSION["isLoggedIn"])){
+                header("location: order.php?id=".$_POST["login"]);
             }else{
-                $message = "wrong username or password";
+                //validate login
+                echo "validate login: ".$_POST["login"];
             }
-
         }
 
         if(isset($_POST["register"])){
@@ -35,17 +24,14 @@
             if(count($validateUsername) > 0){
                 $message = "This username is already registered";
             }else{
-
-                $pass = password_hash($_POST["password"], PASSWORD_DEFAULT, ['cost' => 12]);
-
                 $database->insert("tb_users",[
                     "fullname"=> $_POST["fullname"],
                     "usr"=> $_POST["username"],
-                    "pwd"=> $pass,
+                    "pwd"=> $_POST["password"],
                     "email"=> $_POST["email"]
                 ]);
 
-                //header("location: book.php?id=".$_POST["register"]);
+                header("location: order.php?id=".$_POST["register"]);
             }
         }
     }

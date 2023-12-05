@@ -4,23 +4,20 @@
     if($_GET){
 
         $item = $database->select("tb_dishes",[
-            "[>]tb_amount"=>["id_amount" => "id_amount"],
-            "[>]tb_categories"=>["id_category" => "id_category"]
+            "[>]tb_person_qty"=>["id_qty" => "id_qty"],
+            "[>]tb_categoryes"=>["id_category" => "id_category"]
         ],[
-            "tb_dishes.id_dishes",
-            "tb_dishes.dish_lname",
-            "tb_dishes.dish_sname",
-            "tb_dishes.dish_image",
-            "tb_dishes.dish_description",
-            "tb_dishes.dish_price",
-            "tb_amount.id_amount",
-            "tb_amount.amount_category",//si es individual, de pareja o familiar
-            "tb_amount.amount_description",//explica la cantidad de porciones
-            "tb_categories.id_category",
-            "tb_categories.category_name",//bebida, entrada, comida o postre
-            "tb_categories.category_description",
+            "tb_dishes.id_dish",
+            "tb_dishes.nm_dish",
+            "tb_dishes.img_dish",
+            "tb_dishes.description_dish",
+            "tb_dishes.price_dish",
+            "tb_person_qty.id_qty",
+            "tb_person_qty.nm_person_qty",
+           "tb_categoryes.id_category",
+            "tb_categoryes.nm_category",
         ],[
-            "id_dishes"=>$_GET["id"]
+            "id_dish"=>$_GET["id"]
         ]);
     }
 
@@ -53,16 +50,13 @@
                 <?php 
                     echo "<section class='dish'>";
                         echo "<div class='dish-thumb'>";
-                            echo "<!--Agregar la funcion para que aparezca la imagen del platillo que se seleccione-->";
-                            echo "<img class='dish-image' src='./imgs/".$item[0]["dish_image"]."' alt='".$item[0]["dish_lname"]"'>";
+                            echo "<img class='dish-image' src='".$item[0]["img_dish"]."' alt='".$item[0]["nm_dish"]."'>";
                         echo "</div>";
-                        echo "<!--Agregar la funcion para que aparezca el nombre del platillo que se seleccione-->";
-                        echo "<h3>".$item[0]["dish_lname"]."</h3>";
-                        echo "<!--Agregar la funcion para que aparezca la descripcion, la categoria, el tipo y el precio del platillo que se seleccione-->";
-                        echo "<p>".$item[0]["dish_description"]."</p>";
-                        echo "<p>'Category: '</p>";
+                        echo "<h3>".$item[0]["nm_dish"]."</h3>";
+                       echo "<p>".$item[0]["dish_description"]."</p>";
+                        echo "<h2>'Category: '</h2>";
                         echo "<p>".$item[0]["category_name"]."</p>";
-                        echo "<p>'Price: '</p>";
+                        echo "<h2>'Price:$ '</h2>";
                         echo "<p>".$item[0]["dish_price"]."</p>";
                     echo "</section>";
                 

@@ -51,17 +51,16 @@
 }
 
         if(isset($_SESSION["isLoggedIn"])){
-           $link = "book.php?id=".$item[0]["id_dish"].""; 
+           $link = "order.php?id=".$item[0]["id_dish"].""; 
         }else{
             $link = "./forms.php";
 
         }
 
-        //
+        
 
-       /* // Reference: https://medoo.in/api/select
-        $tours = $database->select("tb_destination_activities","*");
-    */
+       // Reference: https://medoo.in/api/select
+   
 }
 
 ?>
@@ -70,7 +69,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Details Crepes</title>
+    <title>Details</title>
 
     <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -109,6 +108,7 @@ include "./parts/header.php";
                 ."<h2 class='title-style'></h2>"
 
                 ."<span class='desc-style'>$".$item[0]["price_dish"]."</span>"
+                ."<a class='m-cart button' href='".$link."'></a>"
 
                 ."<p class='desc-style'>.</p>"
 
@@ -124,10 +124,6 @@ include "./parts/header.php";
 
 
             ?>
-
-
-
-
 
 
             <footer class="footer">

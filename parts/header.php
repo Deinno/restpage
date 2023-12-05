@@ -10,12 +10,18 @@ echo"<header>"
         ."<li><a href='#'>About</a></li>"
         ."<li><a href='#'>Sales</a></li>"
         ."<li><a href='#'>Categories</a></li>"
-        ."<li><a href='#'>Download</a></li>"
-    ."</ul>"
-    ."<div class='icons'>"
+        ."<li><a href='#'>Download</a></li>";
+        session_start();
+        if(isset($_SESSION["isLoggedIn"])){
+            echo "<li><a class='nav-list-link' href='./forms.php'>".$_SESSION["fullname"]."</a></li>";
+            echo "<li><a class='nav-list-link' href='./logout.php'>Log out</a></li>";
+        }else{
+            echo "<li><a class='nav-list-link' href='./forms.php'>Login</a></li>";
+        }
+    echo"</ul>";
+    echo"<div class='icons'>"
         ."<img id='shopping-cart' src='imgs/icons/anadir-a-la-cesta.svg' alt='Shopping Cart'>"
-        ."<img id='user-menu' src='imgs/icons/usuario.svg' alt='User Menu'>"
-    ."</div>"
+      ."</div>"
 ."</nav>"
 ."</header>"
 ?>
