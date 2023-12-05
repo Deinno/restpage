@@ -1,3 +1,63 @@
+<?php
+    require_once './database.php';
+    $message = "";
+
+    if($_POST){
+
+        if(isset($_POST["login"])){
+
+            $user = $database->select("tb_users","*",[
+                "usr"=> $_POST["username"]
+            ]);
+
+            if(count($user) > 0){
+                //validate password
+                if(password_verify($_POST["password"], $user[0]["pwd"])){
+                    session_start();
+                    $_SESSION["isLoggedIn"] = true;
+                    $_SESSION["fullname"] = $user[0]["fullname"];
+                    header("location: home.php");
+                }else{
+                    $message = "wrong username or password";
+                }
+            }else{
+                $message = "wrong username or password";
+            }
+
+            //validate if user already logged in
+            
+            //if(isset($_SESSION["isLoggedIn"])){
+                //header("location: book.php?id=".$_POST["login"]);
+            //}else{
+                //validate login
+                //echo "validate login: ".$_POST["login"];
+            //}
+        }
+
+        if(isset($_POST["register"])){
+            //validate if user already registered
+            $validateUsername = $database->select("tb_users","*",[
+                "usr"=>$_POST["username"]
+            ]);
+
+            if(count($validateUsername) > 0){
+                $message = "This username is already registered";
+            }else{
+
+                $pass = password_hash($_POST["password"], PASSWORD_DEFAULT, ['cost' => 12]);
+
+                $database->insert("tb_users",[
+                    "fullname"=> $_POST["fullname"],
+                    "usr"=> $_POST["username"],
+                    "pwd"=> $pass,
+                    "email"=> $_POST["email"]
+                ]);
+
+                //header("location: book.php?id=".$_POST["register"]);
+            }
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,28 +122,28 @@
                     <h3>Sign In</h3>
                     <p>Complete the registration process to enjoy our meals.</p>
 
-                    <form method="post" action="forms.html">
+                    <form method="post" action="forms.php">
                         <div>
                             <div>
-                                <label for="fname">Full Name</label>
+                                <label for='fullname'>Full Name</label>
                             </div>
                             <div>
-                                <input type="text" name="fname">
+                                <input id='fullname' type='text' name='fullname'>
                             </div>
                         </div>
                         
                         <div>
                             <div>
-                                <label for="email">Email Address</label>
+                                <label for='email'>Email Address</label>
                             </div>
                             <div>
-                                <input type="text" name="email">
+                                <input type='text' name='email'>
                             </div>
                         </div>
                         
                         <div>
                             <div>
-                                <label for="username">Username</label>
+                                <label for="usr">Username</label>
                             </div>
                             <div>
                                 <input type="text" name="username">
@@ -104,6 +164,8 @@
                                 <input class="button" type="submit" value="SIGN IN">
                             </div>
                         </div>
+                        <p><?php echo $message; ?></p>
+                        <input type="hidden" name="register" value="1">
 
                     </form>
                 </section>
