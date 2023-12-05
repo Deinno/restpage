@@ -1,0 +1,3 @@
+No se logro implementar el idioma, no se logro implementar la calificacion por categorias, 
+no se logra incluir la recuperacion de contrasena de usuario
+y tampoco se logra terminar el proceso del pedido

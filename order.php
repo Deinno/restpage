@@ -53,9 +53,9 @@
                             echo "<img class='dish-image' src='".$item[0]["img_dish"]."' alt='".$item[0]["nm_dish"]."'>";
                         echo "</div>";
                         echo "<h3>".$item[0]["nm_dish"]."</h3>";
-                       echo "<p>".$item[0]["dish_description"]."</p>";
+                        echo "<p>".$item[0]["description_dish"]."</p>";
                         echo "<h2>'Category: '</h2>";
-                        echo "<p>".$item[0]["category_name"]."</p>";
+                        echo "<p>".$item[0]["nm_category"]."</p>";
                         echo "<h2>'Price:$ '</h2>";
                         echo "<p>".$item[0]["dish_price"]."</p>";
                     echo "</section>";

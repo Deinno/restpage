@@ -5,10 +5,29 @@
     if($_POST){
 
         if(isset($_POST["login"])){
+
+            $user = $database->select("tb_users","*",[
+                "usr"=>$_POST["username"]
+            ]);
+            if(count($user) > 0){
+                //validate password
+                
+                    if(password_verify($_POST["password"], $user[0]["pwd"])){
+                        session_start();
+                        $_SESSION["isLoggedIn"] = true;
+                        $_SESSION["username"] = $user[0]["usr"];
+                        header("location: index.php");
+                    }else{
+                        $message = "wrong username or password";
+                    }
+            }else{
+                $message = "wrong username or password";
+            }
+
             //validate if user already logged in
-            session_start();
+
             if(isset($_SESSION["isLoggedIn"])){
-                header("location: order.php?id=".$_POST["login"]);
+                ("location: order.php?id=".$_POST["login"]);
             }else{
                 //validate login
                 echo "validate login: ".$_POST["login"];
@@ -24,10 +43,13 @@
             if(count($validateUsername) > 0){
                 $message = "This username is already registered";
             }else{
+
+                $pass = password_hash($_POST["password"], PASSWORD_DEFAULT, ['cost' => 12]);
+
                 $database->insert("tb_users",[
                     "fullname"=> $_POST["fullname"],
                     "usr"=> $_POST["username"],
-                    "pwd"=> $_POST["password"],
+                    "pwd"=> $pass,
                     "email"=> $_POST["email"]
                 ]);
 

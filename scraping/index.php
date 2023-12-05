@@ -8,14 +8,14 @@
     */
         
     //link
-    $link = "https://www.allrecipes.com/recipes/721/world-cuisine/european/french/";
+    $link = "https://www.allrecipes.com/recipes/77/drinks/";
 
     $filenames = [];
     $menu_item_names = [];
     $menu_item_descriptions = [];
     $image_urls = [];
 
-    $menu_items = 11;
+    $menu_items = 10;
 
     $items = file_get_html($link);
 
@@ -70,9 +70,9 @@
     }
 
     //get and download images
-    /*foreach ($filenames as $index=>$image){
+    foreach ($filenames as $index=>$image){
         file_put_contents("../scraping/images/image-".$image.".jpg", file_get_contents($image_urls[$index]));
-    }*/
+    }
 
     //insert info
      //Reference: https://medoo.in/api/insert
