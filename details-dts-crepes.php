@@ -24,8 +24,8 @@
         ],[
             "id_dish"=>$_GET["id"]
         ]);
-        $item[0] ["nm_dish"] = $item[0]["nm_dish_tr"];
-        $item[0] ["description_dish"] = $item[0]["description_dish_tr"];
+        $item[0] ["nm_dish"] = $item[0]["nm_dish_fr"];
+        $item[0] ["description_dish"] = $item[0]["description_dish_fr"];
 
         $lang = "EN";
         $url_params = "id=".$item[0]["id_dish"];
@@ -41,13 +41,13 @@
         "tb_dishes.price_dish",
         "tb_categoryes.nm_category",
         "tb_person_qty.nm_person_qty",
-        "tb_camping_categories.camping_category_description",
+       
     ],[
         "id_dish"=>$_GET["id"]
 
     ]);
-    $lang = "TR";
-    $url_params = "id=".$item[0]["id_dish"]."&lang=tr";
+    $lang = "fr";
+    $url_params = "id=".$item[0]["id_dish"]."&lang=fr";
 }
 
         if(isset($_SESSION["isLoggedIn"])){
@@ -79,50 +79,51 @@
 <?php
 include "./parts/header.php";      
 ?>
-            <div class="main-container">
-                <div class="img-container">
-                    <img class="main-image" src="./imgs/desserts/big-dessert-crepes.jpg" alt="Crepes">
-                </div>
+     <?php
+           echo "<div class='main-container'>"
+                ."<div class='img-container'>"
+                ."<img class='main-image' src='".$item[0]["img_dish"]."' alt='".$item[0]["nm_dish"]."'>"
+                ."</div>"
                 
-             <div class="popular-container">
-                    <div class="popular-title-zone">
-                        <h2 id="main-title">Most Popular</h2>
-                    </div>
+                ."<div class='popular-container'>"
+                ."<div class='popular-title-zone'>"
+                ."<h2 id='main-title'>Most Popular</h2>"
+                ."</div>"
 
-                    <div class="popular-images-container">
-                    <div class="recom-dish-a">
-                        <img class="recom-img" src="./imgs/relleno.jpg" alt="Coffee">
-                        <p class="recom-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
-                    </div>
-
-                    </div>
-
-                </div>
+                ."<div class='popular-images-container'>"
+                ."<div class='recom-dish-a'>"
+                ." <img class='recom-img' src='./imgs/relleno.jpg' alt='Coffee'>"
+                ." <p class='recom-text'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>"
+                ."</div>"
+                ."</div>"
+                ."</div>"
 
 
-             </div>
+                ."</div>";
+             
 
 
-            <section class="second-container">
+            echo"<section class='second-container'>"
 
-                <div class="dish-info-container">
-                    <h2 class="title-style">Lorem ipsum dolor sit amet, consectetuer adipis</h2>
+                ."<div class='dish-info-container'>"
+                ."<h2 class='title-style'></h2>"
 
-                    <p class="desc-style">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                ."<span class='desc-style'>$".$item[0]["price_dish"]."</span>"
 
-                    <p class="desc-style">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-
-                  </div>
+                ."<p class='desc-style'>.</p>"
 
                 
+                ."</div>"
 
                 
 
-            </section>
+                
+
+                ."</section>";
     
 
 
-
+            ?>
 
 
 

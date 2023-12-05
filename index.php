@@ -151,7 +151,7 @@ include "./parts/header.php";
                 ."</div>"
                 ."<span class='price'>$".$item["price_dish"]."</span>"
 
-                ."<a class='m-see-more button' href >See more</a>"
+                ."<a class='m-see-more button' href=details-dts-crepes.php?id=".$item["id_dish"]."'>See more</a>"
                 ."<button class='m-cart button'></button>"
                 ."<button class='m-heart button' ></button>"
                 
