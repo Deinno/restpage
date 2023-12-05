@@ -24,14 +24,6 @@
                 $message = "wrong username or password";
             }
 
-            //validate if user already logged in
-            
-            //if(isset($_SESSION["isLoggedIn"])){
-                //header("location: book.php?id=".$_POST["login"]);
-            //}else{
-                //validate login
-                //echo "validate login: ".$_POST["login"];
-            //}
         }
 
         if(isset($_POST["register"])){
@@ -105,7 +97,7 @@
                                 <label for="password">Password</label>
                             </div>
                             <div>
-                                <input type="text" name="password">
+                                <input type="password" name="password">
                             </div>
                         </div>
 
@@ -157,7 +149,7 @@
                                 <label for="password">Password</label>
                             </div>
                             <div>
-                                <input type="text" name="password">
+                                <input type="password" name="password">
                             </div>
                         </div>
 
